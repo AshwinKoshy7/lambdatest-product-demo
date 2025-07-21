@@ -8,10 +8,10 @@ pipeline {
 
     stages {
         stage('Clone Repo') {
-            steps {
-                git 'https://github.com/AshwinKoshy7/lambdatest-product-demo'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/AshwinKoshy7/lambdatest-product-demo'
+    }
+}
 
         stage('Run Tests') {
             steps {
