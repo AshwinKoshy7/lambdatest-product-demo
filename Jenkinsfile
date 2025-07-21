@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.9'   // 👈 Tells Jenkins to use the Maven you configured in "Global Tool Configuration"
+        maven 'Maven 3.9'   // Use configured Maven version from Jenkins
     }
 
     environment {
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git 'https://github.com/AshwinKoshy7/lambdatest-product-demo'
+                git branch: 'main', url: 'https://github.com/AshwinKoshy7/lambdatest-product-demo'
             }
         }
 
